@@ -1,11 +1,7 @@
 import React from "react";
 
 function Button({ label, onButtonClick }) {
-  return (
-    <div>
-      <button onClick={onButtonClick}>{label}</button>
-    </div>
-  );
+  return <button onClick={onButtonClick}>{label}</button>;
 }
 
 export default Button;

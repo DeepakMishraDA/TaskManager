@@ -16,7 +16,7 @@ function HeadContainer() {
     <div>
       <Header title="Task-manager" />
       <Input inputValue={inputValue} inputHandler={inputHandler} />
-      <Button />
+      <Button label="Add" />
     </div>
   );
 }
