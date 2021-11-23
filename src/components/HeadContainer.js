@@ -18,7 +18,9 @@ function HeadContainer({ updateTodo, todos }) {
       <Header title="Task-manager" />
       <Input inputValue={inputValue} inputHandler={inputHandler} />
       <Button label="Add" onButtonclick={() => updateTodo(inputValue)} />
-      <TaskContainer task={todos} />
+      {todos.map((tasks) => {
+        return <TaskContainer tasks={tasks} />;
+      })}
     </div>
   );
 }
