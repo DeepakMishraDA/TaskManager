@@ -1,7 +1,14 @@
 import React from "react";
 
 function Input({ inputHandler, inputValue }) {
-  return <input type="text" onChange={inputHandler} value={inputValue} />;
+  return (
+    <input
+      placeholder="type something"
+      type="text"
+      onChange={inputHandler}
+      value={inputValue}
+    />
+  );
 }
 
 export default Input;

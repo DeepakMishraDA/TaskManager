@@ -5,7 +5,7 @@ import Input from "./Input";
 import Button from "./Button";
 
 function HeadContainer() {
-  const [inputValue, setInput] = useState("type here...");
+  const [inputValue, setInput] = useState("");
 
   const inputHandler = (value) => {
     console.log(value.target.value);
