@@ -7,10 +7,14 @@ import Button from "./Button";
 function HeadContainer() {
   const [inputValue, setInput] = useState("type here...");
 
+  const inputHandler = (value) => {
+    setInput(value);
+  };
+
   return (
     <div>
       <Header title="Task-manager" />
-      <Input inputValue={inputValue} />
+      <Input inputValue={inputValue} setInput={inputHandler} />
       <Button />
     </div>
   );
