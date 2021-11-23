@@ -5,9 +5,14 @@ function TaskContainer({ task }) {
   return (
     <div>
       {task.map((item) => {
-        return <p>item</p>;
+        //console.log(item);
+        return (
+          <div>
+            <p>{item}</p>
+            <Button label="X" />
+          </div>
+        );
       })}
-      <Button label="X" />
     </div>
   );
 }

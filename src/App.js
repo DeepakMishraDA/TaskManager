@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodo] = useState([]);
 
   const todoHandler = (task) => {
-    console.log("See", task);
+    //console.log("See", task);
     const copytodos = [...todos, task];
     setTodo(copytodos);
   };

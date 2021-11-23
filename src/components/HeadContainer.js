@@ -9,7 +9,7 @@ function HeadContainer({ updateTodo, todos }) {
   const [inputValue, setInput] = useState("");
 
   const inputHandler = (value) => {
-    console.log(value.target.value);
+    //console.log(value.target.value);
     setInput(value.target.value);
   };
 
