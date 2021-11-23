@@ -1,9 +1,9 @@
 import React from "react";
 
-function Input({ setInput, inputValue }) {
+function Input({ inputHandler, inputValue }) {
   return (
     <div>
-      <input type="text" onChange={setInput} value={inputValue} />
+      <input type="text" onChange={inputHandler} value={inputValue} />
     </div>
   );
 }

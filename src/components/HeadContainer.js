@@ -8,13 +8,14 @@ function HeadContainer() {
   const [inputValue, setInput] = useState("type here...");
 
   const inputHandler = (value) => {
-    setInput(value);
+    console.log(value.target.value);
+    setInput(value.target.value);
   };
 
   return (
     <div>
       <Header title="Task-manager" />
-      <Input inputValue={inputValue} setInput={inputHandler} />
+      <Input inputValue={inputValue} inputHandler={inputHandler} />
       <Button />
     </div>
   );
