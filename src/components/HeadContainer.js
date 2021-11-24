@@ -12,6 +12,7 @@ function HeadContainer({ updateTodo, todos }) {
     //console.log(value.target.value);
     setInput(value.target.value);
   };
+
   if (inputValue === " ") {
     return (
       <div>

@@ -3,15 +3,15 @@
   color: blue;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .h1 {
   color: blue;
-  border: solid wheat;
+  border: dotted black;
 }
 .btn {
   background: blueviolet;
-  border-color: black;
+  border-color: chocolate;
   border-style: groove;
 }
 .input {
