@@ -7,12 +7,16 @@
 }
 .h1 {
   color: blue;
-  border: dotted black;
+  border: outset pink;
 }
 .btn {
-  background: blueviolet;
-  border-color: chocolate;
-  border-style: groove;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: yellow;
+  border-style: solid;
+}
+.btn:hover {
+  background: black;
 }
 .input {
   color: brown;
