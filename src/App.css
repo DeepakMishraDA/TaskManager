@@ -1,8 +1,22 @@
 .App {
   text-align: center;
   color: blue;
-  border: solid;
-
   display: flex;
+  flex-direction: row;
   justify-content: center;
+}
+.h1 {
+  color: blue;
+  border: solid wheat;
+}
+.btn {
+  background: blueviolet;
+  border-color: black;
+  border-style: groove;
+}
+.input {
+  color: brown;
+  border-color: rosybrown;
+  border-style: ridge;
+  border-width: 2px;
 }

@@ -1,7 +1,13 @@
 import React from "react";
 
-function Button({ label, onButtonclick }) {
-  return <button onClick={onButtonclick}>{label}</button>;
+import Button from "@material-ui/core/Button";
+
+function Buttons({ label, onButtonclick }) {
+  return (
+    <Button variant="contained" className="btn" onClick={onButtonclick}>
+      {label}
+    </Button>
+  );
 }
 
-export default Button;
+export default Buttons;
