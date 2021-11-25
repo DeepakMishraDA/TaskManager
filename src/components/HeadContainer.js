@@ -5,12 +5,12 @@ import Input from "./Input";
 import Buttons from "./Button";
 import TaskContainer from "./TaskContainer";
 
-function HeadContainer({ updateTodo, todos }) {
+function HeadContainer({ updateTodo, todos, tasks, removeTodo }) {
   const [inputValue, setInput] = useState(" ");
 
   const inputHandler = (value) => {
-    //console.log(value.target.value);
-    setInput(value.target.value);
+    console.log(value.target.value);
+    setInput(value.target.value); //the momemt u pass some input this func sets event.target.value to what u just passed
   };
 
   if (inputValue === " ") {
@@ -34,7 +34,9 @@ function HeadContainer({ updateTodo, todos }) {
       <Buttons label="Add" onButtonclick={() => updateTodo(inputValue)} />
       {todos.map((tasks, index) => {
         //console.log(index);
-        return <TaskContainer tasks={tasks} id={tasks} />;
+        return (
+          <TaskContainer tasks={tasks} id={tasks} removeTask={removeTodo} />
+        );
       })}
     </div>
   );

@@ -8,16 +8,13 @@ const useStyles = makeStyles({
   },
 });
 
-function TaskContainer({ tasks, id }) {
+function TaskContainer({ tasks, id, removeTask }) {
   const classes = useStyles();
 
-  const removeTask = () => {
-    console.log("ID", id);
-  };
   return (
     <Box className={classes.box}>
       <p>{tasks}</p>
-      <Button label="X" onButtonclick={removeTask} />
+      <Button label="X" onButtonclick={(id) => removeTask(id)} />
     </Box>
   );
 }
