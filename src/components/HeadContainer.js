@@ -3,7 +3,6 @@ import { React, useState } from "react";
 import Header from "./Header";
 import Input from "./Input";
 import Buttons from "./Button";
-import TaskContainer from "./TaskContainer";
 
 function HeadContainer({ updateTodo, todos, tasks, removeTodo }) {
   const [inputValue, setInput] = useState(" ");
@@ -32,12 +31,6 @@ function HeadContainer({ updateTodo, todos, tasks, removeTodo }) {
       <Header title="Task-manager" />
       <Input inputValue={inputValue} inputHandler={inputHandler} />
       <Buttons label="Add" onButtonclick={() => updateTodo(inputValue)} />
-      {todos.map((tasks, index) => {
-        //console.log(index);
-        return (
-          <TaskContainer tasks={tasks} id={tasks} removeTask={removeTodo} />
-        );
-      })}
     </div>
   );
 }
