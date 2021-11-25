@@ -34,7 +34,7 @@ function HeadContainer({ updateTodo, todos }) {
       <Buttons label="Add" onButtonclick={() => updateTodo(inputValue)} />
       {todos.map((tasks, index) => {
         //console.log(index);
-        return <TaskContainer tasks={tasks} />;
+        return <TaskContainer tasks={tasks} id={tasks} />;
       })}
     </div>
   );

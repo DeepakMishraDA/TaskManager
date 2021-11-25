@@ -8,6 +8,7 @@ function Input({ inputHandler, inputValue }) {
       type="text"
       onChange={inputHandler}
       value={inputValue}
+      spellcheck="true"
     />
   );
 }

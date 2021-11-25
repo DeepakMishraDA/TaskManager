@@ -6,12 +6,14 @@
   justify-content: space-evenly;
 }
 .h1 {
-  color: blue;
-  border: outset pink;
+  background: brown;
+  border: outset hotpink;
+  font-size: 40px;
+  padding: 20px;
 }
 .btn {
   transition-duration: 0.4s;
-  background-color: white;
+  background-color: purple;
   color: yellow;
   border-style: solid;
 }
@@ -21,6 +23,13 @@
 .input {
   color: brown;
   border-color: rosybrown;
-  border-style: ridge;
+  border-style: inset;
   border-width: 2px;
+  border: inset lightseagreen;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-bottom: 10px;
 }

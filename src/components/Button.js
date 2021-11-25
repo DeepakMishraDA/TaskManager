@@ -4,14 +4,14 @@ import { makeStyles, Button } from "@material-ui/core";
 
 const useStyles = makeStyles({
   buttonStyle: {
-    background: "white",
+    background: "lightblue",
     color: "blue",
     border: "solid",
     borderRadius: "10%",
-    paddingLeft: "20px",
-    paddingRight: "20px",
+    paddingLeft: "50px",
+    paddingRight: "50px",
     "&:hover": {
-      background: "orange",
+      background: "purple",
     },
   },
 });
@@ -19,9 +19,11 @@ const useStyles = makeStyles({
 function Buttons({ label, onButtonclick }) {
   const classes = useStyles();
   return (
-    <Button className={classes.buttonStyle} onClick={onButtonclick}>
-      {label}
-    </Button>
+    <div>
+      <Button className={classes.buttonStyle} onClick={onButtonclick}>
+        {label}
+      </Button>
+    </div>
   );
 }
 
