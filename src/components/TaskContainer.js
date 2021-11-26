@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   },
 });
 
-function TaskContainer({ tasks, id, removeTask }) {
+function TaskContainer({ tasks, id, removeTask, removeAll }) {
   const classes = useStyles();
 
   return (

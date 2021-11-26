@@ -3,7 +3,6 @@ import "./App.css";
 import { useState } from "react";
 
 import HeadContainer from "./components/HeadContainer";
-import TaskContainer from "./components/TaskContainer";
 
 function App() {
   const [todos, setTodo] = useState([]);
@@ -25,16 +24,18 @@ function App() {
     });
     setTodo(filteredTodos);
   };
+  const removeAll = () => {
+    setTodo([]);
+  };
 
   return (
     <div className="App">
-      <HeadContainer updateTodo={todoHandler} todos={todos} />
-      {todos.map((task, index) => {
-        //console.log(index);
-        return (
-          <TaskContainer tasks={task} id={task} removeTask={todoRemover} />
-        );
-      })}
+      <HeadContainer
+        updateTodo={todoHandler}
+        todos={todos}
+        removeTodo={todoRemover}
+        removeAll={removeAll}
+      />
     </div>
   );
 }
