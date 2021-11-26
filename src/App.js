@@ -18,10 +18,10 @@ function App() {
     //the func will auto access event.target.value and then this set it into the copytodos array
     const copytodos = [...todos];
     const filteredTodos = copytodos.filter((text) => {
-      if (text === id) {
-        return false;
+      if (text !== id) {
+        return true;
       }
-      return true;
+      return false;
     });
     setTodo(filteredTodos);
   };
