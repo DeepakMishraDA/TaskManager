@@ -14,7 +14,7 @@ function TaskContainer({ tasks, id, removeTask }) {
   return (
     <Box className={classes.box}>
       <p>{tasks}</p>
-      <Button label="X" onButtonclick={removeTask} />
+      <Button label="X" onButtonclick={(id) => removeTask(id)} />
     </Box>
   );
 }

@@ -30,11 +30,7 @@ function App() {
       {todos.map((tasks, index) => {
         //console.log(index);
         return (
-          <TaskContainer
-            tasks={tasks}
-            id={tasks}
-            removeTask={(id) => todoRemover(id)}
-          />
+          <TaskContainer tasks={tasks} id={tasks} removeTask={todoRemover} />
         );
       })}
     </div>
