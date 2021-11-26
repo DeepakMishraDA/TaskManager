@@ -8,7 +8,7 @@ function HeadContainer({ updateTodo, todos, tasks, removeTodo }) {
   const [inputValue, setInput] = useState(" ");
 
   const inputHandler = (value) => {
-    console.log(value.target.value);
+    //console.log(value.target.value);
     setInput(value.target.value); //the momemt u pass some input this func sets event.target.value to what u just passed
   };
 
