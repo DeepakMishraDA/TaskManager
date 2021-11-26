@@ -26,15 +26,15 @@ function App() {
 
   return (
     <div className="App">
-      <HeadContainer
-        updateTodo={todoHandler}
-        todos={todos}
-        removeTodo={todoRemover}
-      />
+      <HeadContainer updateTodo={todoHandler} todos={todos} />
       {todos.map((tasks, index) => {
         //console.log(index);
         return (
-          <TaskContainer tasks={tasks} id={tasks} removeTask={todoRemover} />
+          <TaskContainer
+            tasks={tasks}
+            id={tasks}
+            removeTask={(id) => todoRemover(id)}
+          />
         );
       })}
     </div>
