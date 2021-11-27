@@ -16,8 +16,11 @@ function App() {
   const todoRemover = (id) => {
     //the func will auto access event.target.value and then this set it into the copytodos array
     const copytodos = [...todos];
-    const filteredTodos = copytodos.filter((text) => {
-      if (text !== id) {
+
+    const filteredTodos = copytodos.filter((text, index) => {
+      const isNumber = (element) => element === id;
+      const targetId = copytodos.findIndex(isNumber);
+      if (index !== targetId) {
         return true;
       }
       return false;
