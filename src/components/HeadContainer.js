@@ -33,7 +33,7 @@ function HeadContainer({ updateTodo, todos, tasks, removeTodo, removeAll }) {
       <Input inputValue={inputValue} inputHandler={inputHandler} />
       <Buttons label="Add" onButtonclick={() => updateTodo(inputValue)} />
       {todos.map((task, index) => {
-        //console.log(index);
+        console.log(index);
         return <TaskContainer tasks={task} id={task} removeTask={removeTodo} />;
       })}
       <Buttons onButtonclick={removeAll} label={"Remove-all"} />
