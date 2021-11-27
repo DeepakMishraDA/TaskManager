@@ -18,8 +18,8 @@ function App() {
     const copytodos = [...todos];
 
     const filteredTodos = copytodos.filter((text, index) => {
-      const isNumber = (element) => element === id;
-      const targetId = copytodos.findIndex(isNumber);
+      //const isNumber = (element) => element === id;
+      const targetId = copytodos.findIndex((element) => element === id);
       if (index !== targetId) {
         return true;
       }
