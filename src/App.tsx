@@ -7,7 +7,7 @@ import HeadContainer from "./components/HeadContainer";
 function App() {
   const [todos, setTodo] = useState([]);
 
-  const todoHandler = (task) => {
+  const todoHandler = (task:string) => {
     //the func will auto access event.target.value and then this set it into the copytodos array
     //console.log("See", task);
     const copytodos = [...todos, task];
