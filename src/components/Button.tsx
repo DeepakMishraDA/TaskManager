@@ -19,14 +19,15 @@ const useStyles = makeStyles({
 
 type BtnProps = {
   label: string 
-  onButtonclick: (task: string) => void
+  onButtonclick: () => void
+  
 };
 
-function Buttons({ label, onButtonclick }:BtnProps) {
+function Buttons({ label, onButtonclick}:BtnProps) {
   const classes = useStyles();
   return (
     <div>
-      <Button className={classes.buttonStyle} onClick={onButtonclick}>
+      <Button className={classes.buttonStyle} onClick={() => onButtonclick()}>
         {label}
       </Button>
     </div>

@@ -38,7 +38,7 @@ function HeadContainer({ updateTodo, todos, removeTodo, removeAll }: HcProps) {
     <div>
       <Header title="Task-manager" />
       <Input inputValue={inputValue} inputHandler={inputHandler} />
-      <Buttons label="Add" onButtonclick={() => updateTodo(inputValue)} />
+      <Buttons label="Add" onButtonclick={()=> updateTodo(inputValue)} />
       {todos.map((task, index) => {
         console.log(index);
         return <TaskContainer tasks={task} id={task} removeTask={removeTodo} />;
