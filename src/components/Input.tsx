@@ -1,6 +1,12 @@
 import React from "react";
 
-function Input({ inputHandler, inputValue }) {
+
+type InProps = {
+  inputHandler: (value: React.ChangeEvent<HTMLInputElement>) => void
+  inputValue: string
+}
+
+function Input({ inputHandler, inputValue }:InProps) {
   return (
     <input
       className="input"
@@ -8,7 +14,6 @@ function Input({ inputHandler, inputValue }) {
       type="text"
       onChange={inputHandler}
       value={inputValue}
-      spellcheck="true"
     />
   );
 }

@@ -15,7 +15,7 @@ type HcProps = {
 function HeadContainer({ updateTodo, todos, removeTodo, removeAll }: HcProps) {
   const [inputValue, setInput] = useState(" ");
 
-  const inputHandler = (value) => {
+  const inputHandler = (value: React.ChangeEvent<HTMLInputElement>) => {
     //console.log(value.target.value);
     setInput(value.target.value); //the momemt u pass some input this func sets event.target.value to what u just passed
   };

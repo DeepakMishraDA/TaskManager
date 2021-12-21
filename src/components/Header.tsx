@@ -1,6 +1,9 @@
 import React from "react";
 
-function Header({ title }) {
+type HdProps = {
+  title: string
+}
+function Header({ title }:HdProps) {
   return (
     <div>
       <h1 className="h1">{title}</h1>
