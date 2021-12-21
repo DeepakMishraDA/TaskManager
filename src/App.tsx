@@ -1,19 +1,19 @@
 import "./App.css";
 
-import { useState } from "react";
+import {useState } from "react"; //ChangeEvent
 
 import HeadContainer from "./components/HeadContainer";
 
 function App() {
   const [todos, setTodo] = useState<string[]>([]);
-
-  const todoHandler = (task:string) => {
+ 
+  const todoHandler = (task: string)=> {
     //the func will auto access event.target.value and then this set it into the copytodos array
     //console.log("See", task);
     const copytodos = [...todos, task];
     setTodo(copytodos);
   };
-  const todoRemover = (id) => {
+  const todoRemover = (id: string) => {
     //the func will auto access event.target.value and then this set it into the copytodos array
     const copytodos = [...todos];
 
@@ -38,7 +38,7 @@ function App() {
         todos={todos}
         removeTodo={todoRemover}
         removeAll={removeAll}
-      />
+        />
     </div>
   );
 }

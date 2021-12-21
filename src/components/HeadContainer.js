@@ -5,14 +5,7 @@ import Input from "./Input";
 import Buttons from "./Button";
 import TaskContainer from "./TaskContainer";
 
-type HcProps = {
-  updateTodo: (task: string) => void
-  todos: string[]
-  removeTodo: (id: string) => void
-  removeAll: () => void
-};
-
-function HeadContainer({ updateTodo, todos, removeTodo, removeAll }: HcProps) {
+function HeadContainer({ updateTodo, todos, removeTodo, removeAll }) {
   const [inputValue, setInput] = useState(" ");
 
   const inputHandler = (value) => {
