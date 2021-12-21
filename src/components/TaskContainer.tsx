@@ -9,7 +9,14 @@ const useStyles = makeStyles({
   },
 });
 
-function TaskContainer({ tasks, id, removeTask, removeAll }) {
+type TcProps = {
+  tasks: string
+  id: string
+  removeTask: (id: string) => void
+ 
+};
+
+function TaskContainer({ tasks, id, removeTask }: TcProps) {
   const classes = useStyles();
 
   return (

@@ -17,7 +17,12 @@ const useStyles = makeStyles({
   },
 });
 
-function Buttons({ label, onButtonclick }) {
+type BtnProps = {
+  label: string 
+  onButtonclick: (task: string) => void
+};
+
+function Buttons({ label, onButtonclick }:BtnProps) {
   const classes = useStyles();
   return (
     <div>
